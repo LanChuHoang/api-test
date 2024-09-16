@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    image: api_test_image
+    build: .
+    ports:
+      - "8000:8000"
+
+  test:
+    image: api_test_image
+    command: ["pytest"]
